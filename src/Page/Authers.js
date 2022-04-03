@@ -8,7 +8,7 @@ export function Authers() {
   return (
     <div>
       {List.map((Authers) => (
-        <Authers key={List.id} Authers={List} />
+        <Auther key={Authers.id} data={Authers} />
       ))}
     </div>
   );
