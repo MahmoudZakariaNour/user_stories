@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 
-export function useAuthor(AuthId) {
 const authorsUrl = "https://jsonplaceholder.typicode.com/users";
-const [author, setAuthors] = useState([]);
+export function useAuthor(AuthId) {
+  const [author, setAuthors] = useState(null);
 
   useEffect(() => {
     fetch(`${authorsUrl}/${AuthId}`)
       .then((response) => response.json())
       .then((json) => {
-        setAuthors(json)
+        setAuthors(json);
       });
   }, [AuthId]);
-
-  return author;
+  return author ;
 }

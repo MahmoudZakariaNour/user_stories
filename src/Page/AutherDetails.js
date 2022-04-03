@@ -4,12 +4,13 @@ import { useAuthor } from "../hooks/useAuthor";
 
 export function AutherDetails() {
   const { AuthId } = useParams();
-  const Auth  = useAuthor(AuthId);
-  console.log(AuthId)
-  return (
-    <div>
-      <h1>{Auth.name}</h1>
-      <p>{Auth.username}</p>
-    </div>
-  );
+  const author  = useAuthor(AuthId);
+  return  (
+    author &&
+   <div>
+    <h1>{author.name}</h1>
+    <p>{author.username}</p>
+    <p>{author.address.street}</p>
+  </div>
+    );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Auther } from "../Components/Authers"  ;
 import {useAuthors} from "../hooks/useAuthors";
 
-export function Authers() {
+export function Authors() {
   const List = useAuthors();
 
   return (
