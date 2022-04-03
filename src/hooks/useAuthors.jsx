@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-const authorsUrl = "https://jsonplaceholder.typicode.com/users";
 export function useAuthors() {
-  const [author, setAuthors] = useState([]);
+const authorsUrl = "https://jsonplaceholder.typicode.com/users";
+const [author, setAuthors] = useState([]);
 
   useEffect(() => {
     fetch(authorsUrl)

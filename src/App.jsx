@@ -1,11 +1,13 @@
 import './App.css';
-import {Routers ,Route} from "react-router-dom"
-
+import {Route} from "react-router-dom"
 import { Authers } from './Page/Authers';
+import { useAuthors } from './hooks/useAuthors';
 function App() {
+  useAuthors();
+
   return (
       <>
-        <Route path="/Home" element={<Authers />} />
+        <Route path="home" element={<Authers />} />
 
       </>
   );

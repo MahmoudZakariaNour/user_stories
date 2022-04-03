@@ -7,8 +7,8 @@ export function Authers() {
 
   return (
     <div>
-      {List.map((post) => (
-        <Auther key={List.id} Auther={List} />
+      {List.map((Authers) => (
+        <Authers key={List.id} Authers={List} />
       ))}
     </div>
   );
