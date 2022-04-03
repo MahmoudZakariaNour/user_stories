@@ -1,8 +1,7 @@
 import './App.css';
 import {Route,Routes} from "react-router-dom"
 import { Authers } from './Page/Authers';
-import { useAuthors } from './hooks/useAuthors';
-import { useEffect } from 'react';
+import { AutherDetails } from './Page/AutherDetails';
 function App() {
 
 
@@ -11,6 +10,7 @@ function App() {
   return (
     <Routes>
       <Route path="home" element={<Authers />} />
+      <Route path="blog/:AuthId" element={<AutherDetails />} />
     </Routes>
   );
 }

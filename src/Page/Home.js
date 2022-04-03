@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export function Home(){
-    return(
-        <div>
-            <Link to="/home">HOME</Link>
-        </div>
-    );
+    // return(
+    //     // <div>
+    //     //     <Link to="/home">HOME</Link>
+    //     // </div>
+    // );
 }

@@ -8,7 +8,6 @@ const [author, setAuthors] = useState([]);
     fetch(authorsUrl)
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
         setAuthors(json)
       });
   }, []);
