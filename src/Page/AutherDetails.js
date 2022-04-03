@@ -1,14 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import {useAuthors} from "../hooks/useAuthors";
+import { useAuthor } from "../hooks/useAuthor";
 
 export function AutherDetails() {
   const { AuthId } = useParams();
-  const { Auth } = useAuthors(AuthId);
+  const Auth  = useAuthor(AuthId);
+  console.log(AuthId)
   return (
-      <div>
-          <h1>{Auth.title}</h1>
-             <p>{Auth.body}</p>
-      </div>
+    <div>
+      <h1>{Auth.name}</h1>
+      <p>{Auth.username}</p>
+    </div>
   );
 }
