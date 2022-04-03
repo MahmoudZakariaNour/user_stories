@@ -5,7 +5,7 @@ export function Auther({ data }) {
   return (
     <div>
       <h3>{data.name}</h3>
-      <Link to={`/Home/${data.id}`}>READ MORE</Link>
+      <Link to={`/home/${data.id}`}>READ MORE</Link>
     </div>
   );
 }
