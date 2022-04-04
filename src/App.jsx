@@ -5,9 +5,13 @@ import { PostPage } from './Page/PostPage';
 import { PostDetails } from './Page/PostDetails';
 import { Home } from './Page/Home';
 import { Authors } from './Page/Authers';
+import { Navbar } from './Components/Navbar';
 function App() {
 
   return (
+    <>
+    
+    <Navbar/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="home" element={<Authors />} />
@@ -15,6 +19,7 @@ function App() {
       <Route path="posts" element={<PostPage />} />
       <Route path="posts/:PostId" element={<PostDetails />} />
     </Routes>
+    </>
   );
 }
 

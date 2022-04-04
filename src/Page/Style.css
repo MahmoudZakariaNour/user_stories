@@ -1,0 +1,19 @@
+.AuthorList{
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin: 30px;
+    flex-wrap: wrap;
+
+}
+.PostDetails{
+    display: flex;
+    align-items: center;
+}
+.PostsList{
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin: 30px;
+    flex-wrap: wrap;
+}
