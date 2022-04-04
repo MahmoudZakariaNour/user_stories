@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function Posts({ data }) {
   return (
-    <div style={{ width: "25%", height: "300px" }}>
+    <div style={{ width: "25%",  border:"1px solid darkgrey" ,height:"300px", padding:"20px", margin:"20px" }}>
       <img
         src="https://blog.hootsuite.com/wp-content/uploads/2019/03/Schedule-Facebook-Posts.jpg"
         alt="Not Found"
