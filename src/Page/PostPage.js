@@ -5,6 +5,8 @@ import "./Style.css"
 export function PostPage() {
   const List = usePosts();
   
+  console.log("clicked");
+
   return (List &&
     <div className="PostsList">
       {List.map((posts) => (
