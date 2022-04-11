@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useAddPost } from "../hooks/useAddPost";
 import { useAuthor } from "../hooks/useAuthor";
 import { useAuthorPost } from "../hooks/useAuthorPost";
-import { usePosts } from "../hooks/usePosts";
-import { AddPosts } from "./AddPosts";
+
 
 export function AutherDetails() {
   const { AuthId } = useParams();
