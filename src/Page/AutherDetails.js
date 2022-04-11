@@ -40,17 +40,23 @@ export function AutherDetails() {
           }}
         >
           {authorPosts.map((authorPosts) => (
+            <>
+            
             <p
               style={{
                 fontSize: "20px",
                 width: "300px",
                 border: "1px solid grey",
                 textAlign: "center",
-                height: "100px",
+                height: "120px",
               }}
             >
-              {authorPosts.title}
+              {authorPosts.title}<br/>
+            <Link to={"/posts/"+authorPosts.id}>
+ReadMore
+            </Link>
             </p>
+            </>
           ))}
         </div>
       </>
