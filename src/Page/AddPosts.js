@@ -44,7 +44,7 @@ export function AddPosts() {
           {
 
             setAll([
-              { body: body, id: Math.random(), title: title, userId: AuthId },
+              {userId: AuthId, id: Math.random(),title: title,body: body   },
               ...authorPosts,
             ]);
             setbody("");

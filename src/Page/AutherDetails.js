@@ -2,12 +2,11 @@ import { Link, useParams } from "react-router-dom";
 import { useAuthor } from "../hooks/useAuthor";
 import { useAuthorPost } from "../hooks/useAuthorPost";
 
-
 export function AutherDetails() {
   const { AuthId } = useParams();
   const author = useAuthor(AuthId);
   const authorPosts = useAuthorPost(AuthId);
-  
+
   return (
     author &&
     authorPosts && (
@@ -26,7 +25,7 @@ export function AutherDetails() {
             <p style={{ fontSize: "20px" }}>Website: {author.website}</p>
           </div>
         </div>
-        <Link to={"/create/post/"+AuthId} className="btn btn-primary">
+        <Link to={"/create/post/" + AuthId} className="btn btn-primary">
           create New Post
         </Link>
         <h3>Author Posts:</h3>
@@ -40,23 +39,21 @@ export function AutherDetails() {
           }}
         >
           {authorPosts.map((authorPosts) => (
-            <>
-            
-            <p
-              style={{
-                fontSize: "20px",
-                width: "300px",
-                border: "1px solid grey",
-                textAlign: "center",
-                height: "120px",
-              }}
-            >
-              {authorPosts.title}<br/>
-            <Link to={"/posts/"+authorPosts.id}>
-ReadMore
-            </Link>
-            </p>
-            </>
+            <div key={authorPosts.id}>
+              <p
+                style={{
+                  fontSize: "20px",
+                  width: "300px",
+                  border: "1px solid grey",
+                  textAlign: "center",
+                  height: "120px",
+                }}
+              >
+                {authorPosts.title}
+                <br />
+                <Link to={"/posts/" + authorPosts.id}>ReadMore</Link>
+              </p>
+            </div>
           ))}
         </div>
       </>
