@@ -1,6 +1,5 @@
 import React from "react";
 import { Posts } from "../Components/Posts"  ;
-import { useAuthorPost } from "../hooks/useAuthorPost";
 import {usePosts} from "../hooks/usePosts";
 import "./Style.css"
 export function PostPage() {
